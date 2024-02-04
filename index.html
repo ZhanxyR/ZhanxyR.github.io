@@ -83,6 +83,20 @@
                             </figure> 
                             <div class="more-info text-center"> 
                                 <p>zhanxy@smail.nju.edu.cn</p> 
+                                <button onclick="copyTextToClipboard()">复制文本</button>
+
+                                <script>
+                                function copyTextToClipboard() {
+                                var textToCopy = "zhanxy@smail.nju.edu.cn";
+                                var tempInput = document.createElement("input");
+                                tempInput.value = textToCopy;
+                                document.body.appendChild(tempInput);
+                                tempInput.select();
+                                document.execCommand("copy");
+                                document.body.removeChild(tempInput);
+                                alert("已复制到剪贴板: " + textToCopy);
+                                }
+                                </script>
                             </div> 
                         </div> 
                         <div class="clearfix"> 
