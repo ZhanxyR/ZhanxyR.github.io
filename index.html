@@ -28,7 +28,7 @@
         
                 /* 放大镜样式 */
                 .zoom img {
-                    width: 200px; /* 设置放大后的图片宽度 */
+                    width: 800px; /* 设置放大后的图片宽度 */
                 }
             </style>
         </head> 
@@ -181,8 +181,11 @@
                                                     var zoomImg = document.querySelector('.zoom img');
                                                     zoomImg.src = event.target.src;
                                                     var zoomDiv = document.querySelector('.zoom');
-                                                    zoomDiv.style.top = event.clientY + 'px';
-                                                    zoomDiv.style.left = event.clientX + 'px';
+                                                    var centerX = window.innerWidth / 2;
+                                                    var centerY = window.innerHeight / 2;
+                                                    zoomDiv.style.top = centerY + 'px';
+                                                    zoomDiv.style.left = centerX + 'px';
+                                                    zoomDiv.style.transform = 'translate(-50%, -50%)'; // 居中显示
                                                     zoomDiv.style.display = 'block';
                                                 }
                                         
