@@ -172,7 +172,10 @@
                                         <div class="col-sm-3 abbr"> 
                                             <br>
                                             <!-- <abbr class="badge"><a href="#" rel="external nofollow noopener" target="_blank">PhysRev</a></abbr>  -->
-                                            <img src="/assets/img/teaser_v10.jpg" onclick="zoomIn(event)" style="cursor: zoom-in;" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="pic.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"></img>
+                                            <img src="/assets/img/teaser_v10.jpg" onclick="zoomIn(event)" style="cursor: zoom-in;" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="pic.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                                            <div class="zoom" onclick="zoomOut(event)">
+                                                <img src="/assets/img/teaser_v10.jpg">
+                                            </div>
                                             <script>
                                                 function zoomIn(event) {
                                                     var zoomImg = document.querySelector('.zoom img');
